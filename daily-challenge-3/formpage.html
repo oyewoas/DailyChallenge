@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./formpage.css">
+    <title>Form</title>
+</head>
+<body>
+    <div>
+        <form action="" data-validate>
+            <div>
+                <label for="">Name</label>
+                <input type="text" value="" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="email" value="" name="email" id="email" value="" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+            </div>
+            <div>
+                <label for="">ZIP Code</label>
+                <input id="zip"  value="" name="zip" type="text" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$" required>
+            </div>
+            <div>
+                <label for="">Age</label>
+                <input type="number" value=""  min="18" max="500" name="numberminmax" id="numberminmax" value="" pattern="[2-7]" required>
+            </div>
+            <div>
+                <label for="">Radio Buttons</label>
+                <label class="labels">
+                        <input type="radio" name="radio" id="radio-1" required>
+                        Yes
+                </label>
+                <label class="labels">
+                        <input type="radio" name="radio" id="radio-2" required>
+                        No
+                </label>
+            </div>
+            <div>
+                    <label>Checkboxes</label>
+                    <label class="labels">
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1" required>
+                        Book
+                    </label>
+                    <label class="labels">
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                        Shoe
+                    </label>
+                    <label class="labels">
+                        <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                        Cloth
+                    </label>
+            </div>
+            <div class="buttons" >
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="dist/validate.min.js"></script>
+		<script src="dist/validate.polyfills.min.js"></script>
+    <script src="./formpage.js"></script>
+</body>
+</html>
